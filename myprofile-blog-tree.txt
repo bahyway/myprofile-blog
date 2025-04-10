@@ -1,0 +1,68 @@
+Folder PATH listing for volume My Passport
+Volume serial number is 6C9F-63A7
+D:\ALL\0-1_PROJECTS\MYPROFILE-BLOG
+¦   .gitignore
+¦   myprofile-blog-tree.txt
+¦   README.md
+¦   
++---Bahyway Portfolio and Blog
+    +---docs
+    ¦   +---Bahyway Portfolio and Blog
+    ¦   ¦       01_Bahyway Portfolio and Blog.md
+    ¦   ¦       02_Bahyway Portfolio and Blog.md
+    ¦   ¦       03_Bahyway Portfolio and Blog.md
+    ¦   ¦       04_Bahyway Portfolio and Blog.md
+    ¦   ¦       05_Bahyway Portfolio and Blog.md
+    ¦   ¦       06_Bahyway Portfolio and Blog.md
+    ¦   ¦       07_Bahyway Portfolio and Blog.md
+    ¦   ¦       08_Bahyway Portfolio and Blog.md
+    ¦   ¦       09_Bahyway Portfolio and Blog.md
+    ¦   ¦       10_Bahyway Portfolio and Blog.md
+    ¦   ¦       11_Bahyway Portfolio and Blog.md
+    ¦   ¦       12_Bahyway Portfolio and Blog.md
+    ¦   ¦       13_Bahyway Portfolio and Blog.md
+    ¦   ¦       14_Bahyway Portfolio and Blog.md
+    ¦   ¦       15_Bahyway Portfolio and Blog.md
+    ¦   ¦       16_Bahyway Portfolio and Blog.md
+    ¦   ¦       17_Bahyway Portfolio and Blog.md
+    ¦   ¦       18_Bahyway Portfolio and Blog.md
+    ¦   ¦       19_Bahyway Portfolio and Blog.md
+    ¦   ¦       20_Bahyway Portfolio and Blog.md
+    ¦   ¦       21_Bahyway Portfolio and Blog.md
+    ¦   ¦       Final.md
+    ¦   ¦       Final_03_dockerfile and others.md
+    ¦   ¦       Final_after adding old Profile.md
+    ¦   ¦       Summary.md
+    ¦   ¦       
+    ¦   +---Bahyway-docs-template
+    ¦   ¦       Bahyway-docs-template.md
+    ¦   ¦       index.htm
+    ¦   ¦       index.html
+    ¦   ¦       index.md
+    ¦   ¦       
+    ¦   +---Git Book Placeholders
+    ¦   ¦       Final.md
+    ¦   ¦       Git Book Placeholders.md
+    ¦   ¦       
+    ¦   +---instrct
+    ¦           2Simulation_Page.(WebGL).md
+    ¦           my_profile.md
+    ¦           
+    +---project
+        ¦   .gitignore
+        ¦   index.md
+        ¦   README.md
+        ¦   _config.yml
+        ¦   
+        +---assets
+        ¦   +---css
+        ¦   +---images
+        +---scripts
+        +---_blog
+        ¦       2025-04-10-first-post.md
+        ¦       
+        +---_includes
+        +---_layouts
+        +---_projects
+                veterinary-microbial-diseases.md
+                
