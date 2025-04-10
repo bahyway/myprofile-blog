@@ -1,0 +1,4 @@
+# _config.yml
+baseurl: ""
+url: "https://github.com/bahyway/myprofile-blog.git"
+theme: minima

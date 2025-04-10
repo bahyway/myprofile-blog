@@ -1,0 +1,22 @@
+# Summary
+
+- [Introduction](README.md)
+- [Portfolio Overview](portfolio.md)
+  - [Veterinary Microbial Diseases](projects/veterinary-microbial-diseases.md)
+- [Blog](blog/index.md)
+  - [First Blog Post](blog/2025-04-10-veterinary-microbial-diseases.md)
+- [Multilingual Setup](i18n.md)
+  - [English Pages](i18n/en/index.md)
+  - [Dutch Pages](i18n/nl/index.md)
+  - [Arabic Pages](i18n/ar/index.md)
+- [Chatbot Integration](chatbot/index.md)
+  - [Chatbot UI](chatbot/ui.md)
+  - [Chatbot API](chatbot/api.md)
+  - [LangChain Vector Index](chatbot/langchain-index.md)
+  - [Escalation to Human](chatbot/escalation.md)
+- [Deployment](deployment/index.md)
+  - [Docker Setup](deployment/docker.md)
+  - [GitHub Actions](deployment/github-actions.md)
+  - [Notifications](deployment/notifications.md)
+- [.env and Secrets](env.md)
+
