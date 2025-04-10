@@ -132,12 +132,12 @@ npm install --save-dev @astrojs/github
 2. Update `astro.config.mjs`:
 
 ```js
-import { defineConfig } from 'astro/config';
-import github from '@astrojs/github';
+import { defineConfig } from "astro/config";
+import github from "@astrojs/github";
 
 export default defineConfig({
-  site: 'https://yourusername.github.io',
-  outDir: 'dist',
+  site: "https://yourusername.github.io",
+  outDir: "dist",
   integrations: [github()],
 });
 ```
@@ -382,12 +382,13 @@ body {
   --text-color: #111;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --bg-color: #111;
   --text-color: #f9f9f9;
 }
 
-header, footer {
+header,
+footer {
   padding: 1rem;
   text-align: center;
   background-color: #ececec;
@@ -407,7 +408,7 @@ main {
 You can switch to dark mode by adding `data-theme="dark"` to the `<body>` tag in your layout:
 
 ```html
-<body data-theme="dark">
+<body data-theme="dark"></body>
 ```
 
 Or dynamically with JavaScript later.
@@ -421,10 +422,11 @@ To enable dark/light theme toggle and multilingual support (English, Dutch, Arab
 ### 📁 Add Script: `public/scripts/theme-toggle.js`
 
 ```js
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('theme-toggle');
-  toggle.addEventListener('click', () => {
-    document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.dataset.theme =
+      document.body.dataset.theme === "dark" ? "light" : "dark";
   });
 });
 ```
@@ -756,17 +758,17 @@ Create the following simple HTML chatbot pages under the `public/chat/` folder:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>English Chatbot</title>
-  <script defer src="/chatbot/en-bot.js"></script>
-</head>
-<body>
-  <h2>Ask about my projects (EN)</h2>
-  <div id="chat-window"></div>
-  <input id="user-input" placeholder="Ask me anything..." />
-  <button onclick="sendMessage()">Send</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>English Chatbot</title>
+    <script defer src="/chatbot/en-bot.js"></script>
+  </head>
+  <body>
+    <h2>Ask about my projects (EN)</h2>
+    <div id="chat-window"></div>
+    <input id="user-input" placeholder="Ask me anything..." />
+    <button onclick="sendMessage()">Send</button>
+  </body>
 </html>
 ```
 
@@ -775,17 +777,17 @@ Create the following simple HTML chatbot pages under the `public/chat/` folder:
 ```html
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <title>Nederlandse Chatbot</title>
-  <script defer src="/chatbot/nl-bot.js"></script>
-</head>
-<body>
-  <h2>Stel een vraag over mijn projecten (NL)</h2>
-  <div id="chat-window"></div>
-  <input id="user-input" placeholder="Typ je vraag..." />
-  <button onclick="sendMessage()">Verstuur</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nederlandse Chatbot</title>
+    <script defer src="/chatbot/nl-bot.js"></script>
+  </head>
+  <body>
+    <h2>Stel een vraag over mijn projecten (NL)</h2>
+    <div id="chat-window"></div>
+    <input id="user-input" placeholder="Typ je vraag..." />
+    <button onclick="sendMessage()">Verstuur</button>
+  </body>
 </html>
 ```
 
@@ -794,17 +796,17 @@ Create the following simple HTML chatbot pages under the `public/chat/` folder:
 ```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>الدردشة العربية</title>
-  <script defer src="/chatbot/ar-bot.js"></script>
-</head>
-<body>
-  <h2>اسألني عن مشاريعي (AR)</h2>
-  <div id="chat-window"></div>
-  <input id="user-input" placeholder="اكتب سؤالك هنا..." />
-  <button onclick="sendMessage()">إرسال</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>الدردشة العربية</title>
+    <script defer src="/chatbot/ar-bot.js"></script>
+  </head>
+  <body>
+    <h2>اسألني عن مشاريعي (AR)</h2>
+    <div id="chat-window"></div>
+    <input id="user-input" placeholder="اكتب سؤالك هنا..." />
+    <button onclick="sendMessage()">إرسال</button>
+  </body>
 </html>
 ```
 
@@ -822,20 +824,24 @@ Place these files under `public/chatbot/` to connect each language-specific chat
 
 ```js
 async function sendMessage() {
-  const input = document.getElementById('user-input');
+  const input = document.getElementById("user-input");
   const message = input.value;
   if (!message) return;
 
-  const response = await fetch('/api/chat/en', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message })
+  const response = await fetch("/api/chat/en", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message }),
   });
   const data = await response.json();
 
-  document.getElementById('chat-window').innerHTML += `<p><strong>You:</strong> ${message}</p>`;
-  document.getElementById('chat-window').innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
-  input.value = '';
+  document.getElementById(
+    "chat-window"
+  ).innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+  document.getElementById(
+    "chat-window"
+  ).innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
+  input.value = "";
 }
 ```
 
@@ -843,20 +849,24 @@ async function sendMessage() {
 
 ```js
 async function sendMessage() {
-  const input = document.getElementById('user-input');
+  const input = document.getElementById("user-input");
   const message = input.value;
   if (!message) return;
 
-  const response = await fetch('/api/chat/nl', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message })
+  const response = await fetch("/api/chat/nl", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message }),
   });
   const data = await response.json();
 
-  document.getElementById('chat-window').innerHTML += `<p><strong>Jij:</strong> ${message}</p>`;
-  document.getElementById('chat-window').innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
-  input.value = '';
+  document.getElementById(
+    "chat-window"
+  ).innerHTML += `<p><strong>Jij:</strong> ${message}</p>`;
+  document.getElementById(
+    "chat-window"
+  ).innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
+  input.value = "";
 }
 ```
 
@@ -864,20 +874,24 @@ async function sendMessage() {
 
 ```js
 async function sendMessage() {
-  const input = document.getElementById('user-input');
+  const input = document.getElementById("user-input");
   const message = input.value;
   if (!message) return;
 
-  const response = await fetch('/api/chat/ar', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message })
+  const response = await fetch("/api/chat/ar", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message }),
   });
   const data = await response.json();
 
-  document.getElementById('chat-window').innerHTML += `<p><strong>أنت:</strong> ${message}</p>`;
-  document.getElementById('chat-window').innerHTML += `<p><strong>البوت:</strong> ${data.reply}</p>`;
-  input.value = '';
+  document.getElementById(
+    "chat-window"
+  ).innerHTML += `<p><strong>أنت:</strong> ${message}</p>`;
+  document.getElementById(
+    "chat-window"
+  ).innerHTML += `<p><strong>البوت:</strong> ${data.reply}</p>`;
+  input.value = "";
 }
 ```
 
@@ -974,31 +988,33 @@ npm install express body-parser openai
 \`\`
 
 ```js
-const express = require('express');
-const bodyParser = require('body-parser');
-const { Configuration, OpenAIApi } = require('openai');
+const express = require("express");
+const bodyParser = require("body-parser");
+const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
 app.use(bodyParser.json());
 
-const openai = new OpenAIApi(new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
-}));
+const openai = new OpenAIApi(
+  new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+  })
+);
 
-app.post('/api/chat/:lang', async (req, res) => {
+app.post("/api/chat/:lang", async (req, res) => {
   const lang = req.params.lang;
   const question = req.body.message;
   const prompt = `You are a multilingual chatbot. Reply in ${lang.toUpperCase()}: ${question}`;
 
   const completion = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: prompt }]
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: prompt }],
   });
 
   res.json({ reply: completion.data.choices[0].message.content });
 });
 
-app.listen(3000, () => console.log('Chatbot API running on port 3000'));
+app.listen(3000, () => console.log("Chatbot API running on port 3000"));
 ```
 
 Set your `OPENAI_API_KEY` in `.env` or environment variables.
@@ -1059,7 +1075,7 @@ CMD ["node", "index.js"]
 ### 🧰 `docker-compose.yml`
 
 ```yaml
-version: '3.9'
+version: "3.9"
 
 services:
   chatbot-fastapi:
@@ -1171,4 +1187,3 @@ This will run the `build_index.py` script and regenerate all FAISS indexes.
 4. We can build the structure and automate deployment together.
 
 Let me know when you're ready to start step-by-step!
-
